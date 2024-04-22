@@ -123,8 +123,9 @@ game = Heuristics()
 
 game.allowStep = True # Allow the game to pause after each step
 game.finalText = True # Show the final text 
-game.auto = False # Auto step
+game.auto = True # Auto step
 game.allowGameOver = True 
+
 
 running = True
 while running:

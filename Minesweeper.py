@@ -6,9 +6,12 @@ pygame.init()
 bg_color = (192, 192, 192)
 grid_color = (128, 128, 128)
 
-game_width = 3  # Change this to increase size
-game_height = 3  # Change this to increase size
-numMine = 2  # Number of mines
+
+game_width = 16          # Change this to increase size
+game_height = 16         # Change this to increase size
+numMine = 30             # Number of mines
+
+
 grid_size = 32  # Size of grid (WARNING: macke sure to change the images dimension as well)
 border = 16  # Top border
 top_border = 100  # Left, Right, Bottom border
@@ -234,9 +237,7 @@ class Game:
                                                 self.mineLeft += 1
                                             else:
                                                 j.flag = True
-                                                self.mineLeft -= 1
-                                print(self.openGrid)
-                
+                                                self.mineLeft -= 1                
                 self.checkState()
                 self.Draw()
     

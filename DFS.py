@@ -74,9 +74,10 @@ class DFS_SOLVER(Game):
             else:
                 self.revealAllUncoverGrid()
                 self.renderAndWait()
+                if self.checkState(): return
                 self.hideAllRevealGrid()
                 self.renderAndWait()
-                if self.checkState(): return
+                
             self.grid[x][y].flag = False
             self.mineLeft += 1
             self.renderAndWait()
@@ -87,9 +88,10 @@ class DFS_SOLVER(Game):
         else:
             self.revealAllUncoverGrid()
             self.renderAndWait()
+            if self.checkState(): return
             self.hideAllRevealGrid()
             self.renderAndWait()
-            if self.checkState(): return
+            
         
         # self.grid[x][y].hideGrid()
         #self.renderAndWait()
@@ -153,7 +155,6 @@ while running:
         if keys[pygame.K_r]:
             game.reset()
             r = False
-
 
 pygame.quit()
 quit()
